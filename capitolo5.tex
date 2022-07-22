@@ -1,0 +1,30 @@
+\chapter*{Capitolo 5}
+\addcontentsline{toc}{chapter}{Capitolo 5}
+
+\section*{Conclusioni}
+\addcontentsline{toc}{section}{Conclusioni}
+
+
+In un futuro in cui è sempre più cruciale la velocità di connessione tra dispositivi e sono più presenti l' Internet of Things e il Cloud Computing, le SDN si collocano come potenziale punto di unione tra le necessità delle nuove tecnologie e la forza di avere un networking volto all' open source. Con il paradigma della rete aperta e programmabile si possono introdurre innovazioni a livello Data Plane e Control Plane.\\
+\newline 
+Lo scopo della tesi è stato quello di analizzare le prestazioni grezze e le potenzialità di DPDK, cercando di unire la velocità del forwarding di quest'ultimo alla versatilità, quindi programmabilità, del piano di controllo gestito da uno switch P4. 
+L'analisi delle prestazioni di DPDK fa risaltare la potenza della tecnologia, che sfruttando il Kernel Bypassing, è capace di generare un traffico molto elevato anche disponendo di hardware a basse prestazioni. I test sono stati eseguiti trasmettendo pacchetti da 1500 byte, così da ottenere una quantità maggiore di dati trasmessi.\\
+\newline
+I risultati in condizioni reali riportano un throughput medio di 10 Gbit/s che per le reti odierne è sicuramente un risultato interessante, avendo la capacità di gestire in media qualche giga di dati. 
+Le librerie di DPDK sono generalmente pensate per agire su di un flusso di dati suddiviso in pacchetti di piccola dimensione (64 byte). Negli usi applicativi moderni, come ad esempio scenari di streaming o flussi dati costanti, è difficile riuscire a segmentare il traffico in pacchetti di così piccola taglia.
+Un ulteriore limite di DPDK può essere trovato nell' usabilità di questo framework. Nella fase di test è stato utilizzato un tool in grado di generare una enorme quantità di pacchetti per valutare le performance di instradamento. Dal punto di vista dell' utilizzo, sarebbe utile usufruire di questa tecnologia in modo trasparente, ovvero poter delegare alla scheda di rete le operazioni quotidiane senza accorgersi del livello sottostante e rendere così compatibile DPDK con il livello applicativo, come ad esempio la navigazione su Internet o l'invio di file ad altri dispositivi.\\
+\newline
+P4 ha dimostrato grande potenzialità grazie alla sua riprogrammabilità e DPDK si è confermato un'ottima tecnologia per velocizzare il forwarding di pacchetti. 
+Coniugando P4 e DPDK sarebbe possibile unire la versatilità che ha uno switch P4 con il suo approccio ``top-down", alla velocità di instradamento dei dati che offre DPDK anche con un hardware mediocre. Un approccio molto interessante si è rivelato quello del progretto P4-OVS. In questa estensione di OVS, è possibile ottenere prestazioni elevate, in modo da rimpiazzare lo standard Kernel Datapath di cui dispone, con un Datapath completamente basato su DPDK \cite{noauthor_p4ovs}. Nella pratica l'uso di OpenVSwitch resta lo stesso a livello di networking, ma eredita i benefici del packet processing che porta P4 e del forwarding interno di pacchetti che è accelerato grazie al driver DPDK ad alte prestazioni. 
+
+\chapter*{Ringraziamenti}
+\addcontentsline{toc}{chapter}{Ringraziamenti}
+Ringrazio i relatori ed il team di \href{https://ulisse.unibo.it/}{ULISSe} per avermi dato l'opportunità di lavorare su questo tema di ricerca.\\
+\newline
+Vorrei inoltre ringraziare e dedicare questa tesi alla mia famiglia e alle mie persone speciali.
+
+\newpage
+\myemptypage
+
+\printbibliography
+\listoffigures

@@ -1,0 +1,11 @@
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+
+Data Plane Development Kit è un set di librerie a basso livello, scritto in linguaggio C, che offre elevate prestazioni a livello di Data Plane, una branca del Software Defined Networking che si occupa di forwarding e che offre numerosi vantaggi sfruttando la tecnologia del Kernel Bypassing. 
+Per analizzare le prestazioni di DPDK sono stati usati dei generatori di traffico collegati a degli switch programmati con Programming Protocol-Indipendent Packet Processors (P4), un linguaggio di programmazione utilizzato per configurare regole e azioni dei dispositivi di rete.
+Si presenta di seguito l'analisi delle prestazioni con utilizzo della tecnologia P4, che prevede l'impiego di uno o più switch interposti tra un ricevente e il generatore di traffico DPDK. Lo studio è condotto tenendo conto della quantità di pacchetti che vengono persi durante l'inoltro, della velocità effettiva di inoltro e della potenza di calcolo richiesta per effettuare la trasmissione.
+I risultati suggeriscono una elevata capacità di generazione di pacchetti sfruttando DPDK e mettono in risalto la riprogrammabilità degli switch P4.
+Diverse infrastrutture generano diversi risultati, con prestazioni variabili.
+L'analisi dei risultati è utile in funzione ai possibili sviluppi futuri. Unendo le prestazioni di DPDK alla versatilità di P4, sarebbe possibile avanzare un nuovo approccio alle SDN migliorandone le performance a livello Data Plane.
+\newpage

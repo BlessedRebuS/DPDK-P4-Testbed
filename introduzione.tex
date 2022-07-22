@@ -1,0 +1,11 @@
+\section*{Introduzione}
+\addcontentsline{toc}{section}{Introduzione}
+
+
+Le reti moderne distaccandosi dal classico modello di rete chiusa, possono adottare nuovi sviluppi e innovazioni come quelli introdotti dalle SDN.
+P4 si propone come linguaggio con un grande potenziale. Grazie alla sua programmabilità, permette infatti di rendere le funzioni che una volta erano cablate nel firmware del dispositivo, aperte, programmabili e modificabili a runtime. L'approccio adottato è infatti quello ``top-down", dove è il programmatore che definisce le funzionalità che la rete deve avere, senza essere limitato dall'hardware che il vendor produce, tipico scenario dell' approccio ``bottom-up" delle reti tradizionali.
+Questo consente di allontanarsi dal modello in cui la rete è sviluppata, sfruttando la sinergia tra hardware e software, e di centralizzare lo sviluppo del networking sulla base di programmi scritti dallo sviluppatore che ora è in grado di avere una completa panoramica sulle funzionalità dell'ambiente in cui opera.\\
+DPDK fornisce delle migliorie a livello di Data Plane. Grazie alle sue librerie ottimizzate, riesce a velocizzare il forwarding dei pacchetti sfruttando tecnologie come il Kernel Bypassing, che verranno approfondite in seguito. DPDK riesce infatti a portare nello user-space e quindi a livello utente, le interfacce di rete che prima erano legate al Kernel, delegando alla NIC (Network Interface Controller) il completo controllo dell'applicazione.\\
+Questo paradigma permette di avere una visione completamente nuova della rete. Coniugando queste due tecnologie sarebbe possibile infatti controllare l'instradamento di pacchetti accelerandone le prestazioni, senza essere legati all'hardware del dispositivo.
+
+\newpage
